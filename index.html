@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storage</title>
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!--* Завдання 1: Todo List -->
+  <section class="todo-section section">
+    <h2 class="section-title">Todo List</h2>
+    <input type="text" class="task-input input" placeholder="Введіть нове завдання">
+    <button class="add-task-btn btn">Додати</button>
+    <ul class="task-list list"></ul>
+  </section>
+
+  <!--* Завдання 2: Форма -->
+  <section class="form-section section">
+    <h2 class="section-title">Форма збереження даних</h2>
+    <form class="data-form">
+      <label>
+        Ім'я:
+        <input type="text" class="name-input input" placeholder="Введіть ім'я">
+      </label>
+      <label>
+        Вік:
+        <input type="number" class="age-input input" placeholder="Введіть вік">
+      </label>
+      <button type="submit" class="btn-save btn">Зберегти</button>
+    </form>
+    <ul class="data-form-list list"></ul>
+        <div class="form-container"></div>
+        <h2 class="section-title">Логін</h2>
+        <form class="login__form">
+            <input type="text" class="login" placeholder="Введіть логін" required>
+            <input type="password" class="password" placeholder="Введіть пароль" required>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        <p class="message"></p>
+    </div>
+  </section>
+
+  <!--* Завдання 3: Закладки -->
+  <section class="bookmark-section section">
+    <h2 class="section-title">Закладки</h2>
+    <input type="text" class="bookmark-input input" placeholder="Введіть посилання">
+    <button class="add-bookmark-btn btn">Додати</button>
+    <ul class="bookmark-list list"></ul>
+  </section>
+
+  <!--* Завдання 4: Контакти -->
+  <section class="contacts-section section">
+    <h2 class="section-title">Контакти</h2>
+    <form class="contact-form">
+      <label>
+        Ім'я:
+        <input type="text" class="contact-name input" placeholder="Ім'я">
+      </label>
+      <label>
+        Прізвище:
+        <input type="text" class="contact-surname input" placeholder="Прізвище">
+      </label>
+      <label>
+        Телефон:
+        <input type="number" class="contact-phone input" placeholder="Телефон">
+      </label>
+      <label>
+        Email:
+        <input type="email" class="contact-email input" placeholder="Email">
+      </label>
+      <button type="submit" class="btn--submit btn">Додати</button>
+    </form>
+    <ul class="contact-list list"></ul>
+  </section>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
