@@ -10,10 +10,10 @@ function renderTasks() {
   tasks.forEach((task, index) => {
     const li = document.createElement("li");
 
-    const p = document.createElement("p"); 
+    const p = document.createElement("p");
     p.textContent = task.text;
     p.style.textDecoration = task.done ? "line-through" : "none";
-    li.appendChild(p); 
+    li.appendChild(p);
 
     li.addEventListener("click", () => toggleTask(index));
 
@@ -115,18 +115,14 @@ const loginForm = document.querySelector(".login__form");
 const loginInput = document.querySelector(".login");
 const passwordInput = document.querySelector(".password");
 const messageDiv = document.querySelector(".message");
-
 function checkUser(login) {
   const users = JSON.parse(localStorage.getItem("users")) || [];
   return users.some((user) => user.login === login);
 }
-
 loginForm.addEventListener("submit", (event) => {
-  event.preventDefault(); 
-
+  event.preventDefault();
   const login = loginInput.value.trim();
   const password = passwordInput.value.trim();
-
   if (!login || !password) {
     messageDiv.textContent = "Логін і пароль не можуть бути порожніми!";
     messageDiv.style.color = "red";
@@ -147,16 +143,6 @@ loginForm.addEventListener("submit", (event) => {
   loginInput.value = "";
   passwordInput.value = "";
 });
-document.addEventListener('DOMContentLoaded', () => {
-    const savedUsers = JSON.parse(localStorage.getItem('users')) || [];
-    if (savedUsers.length > 0) {
-        messageDiv.textContent = 'Користувач знайдений в localStorage.';
-        messageDiv.style.color = 'blue';
-    } else {
-        messageDiv.textContent = "Користувача не знайдено в localStorage.";
-        messageDiv.style.color = 'red';
-    }
-});
 
 //* Завдання 3: Закладки
 const bookmarkInput = document.querySelector(".bookmark-input");
@@ -176,7 +162,7 @@ function renderBookmarks() {
     a.textContent = bookmark;
     a.target = "_blank";
     p.appendChild(a);
-    li.appendChild(p); 
+    li.appendChild(p);
 
     const editBtn = document.createElement("button");
     editBtn.textContent = "Редагувати";
@@ -240,9 +226,9 @@ function renderContacts() {
   contacts.forEach((contact, index) => {
     const li = document.createElement("li");
 
-    const p = document.createElement("p"); 
+    const p = document.createElement("p");
     p.textContent = `${contact.name} ${contact.surname} — ${contact.phone}, ${contact.email}`;
-    li.appendChild(p); 
+    li.appendChild(p);
 
     const editBtn = document.createElement("button");
     editBtn.textContent = "Редагувати";
